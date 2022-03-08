@@ -56,3 +56,53 @@ document.getElementByClassName(“ClassName”);
 ![](https://imgur.com/KAQwAVB.png)
 
 ## What are JS DOM helper methods?
+Install
+
+npm i -S dom-helpers
+
+dom-helpers :
+
+• ownerDocument(element): returns the element's document owner
+
+• ownerWindow(element): returns the element's document window
+
+• activeElement: return focused element safely
+
+• querySelectorAll(element, selector): optimized qsa, uses getElementBy{Id|TagName|ClassName} if it can.
+
+• contains(container, element)
+
+• height(element, useClientHeight)
+
+• width(element, useClientWidth)
+
+• matches(element, selector)
+
+• offset(element)->{ top: Number, left: Number, height: Number, width: Number}
+
+• offsetParent(element): return the parent node that the element is offset from
+
+• position(element, [offsetParent]: return "offset" of the node to its offsetParent, optionally you can specify the offset parent if different than the "real" one
+
+• scrollTop(element, [value])
+
+• scrollLeft(element, [value])
+
+• scrollParent(element)
+
+• addClass(element, className)
+
+• removeClass(element, className)
+
+• hasClass(element, className)
+
+• toggleClass(element, className)
+
+The real advantage is that any method can be required individually, meaning bundlers like webpack will only include the exact methods you use. This is great for environments where jQuery doesn't make sense, such as React where you only occasionally need to do direct DOM manipulation.
+All methods are exported as a flat namesapce
+var helpers = require('dom-helpers')
+var offset = require('dom-helpers/offset')
+
+// style is a function
+
+require('dom-helpers/css')(node, { width: '40px' })
