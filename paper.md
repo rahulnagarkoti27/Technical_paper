@@ -106,3 +106,11 @@ var offset = require('dom-helpers/offset')
 // style is a function
 
 require('dom-helpers/css')(node, { width: '40px' })
+
+References:
+
+[Youtube](https://youtu.be/XD7fYLQeQIg)
+
+[geeksforgeeks](https://www.geeksforgeeks.org/dom-document-object-model/)
+
+[npm](https://www.npmjs.com/package/dom-helpers)
